@@ -14,5 +14,6 @@ namespace DataAccess.Entities.Concretes
         public string Name { get; set; } = default!; // 08-16 gibi
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
+        public List<ShiftAssignment> ShiftAssignments { get; set; }  // İlişkili vardiya atamaları
     }
 }

@@ -13,11 +13,16 @@ namespace DataAccess.Entities.Concretes
     {
         
         public int StaffId { get; set; }
+        public Staff Staff { get; set; }  // Staff sınıfından bir Staff nesnesi ile ilişkilendirilmiş vardiya atamasını temsil eder.
+
         
+
         public int ShiftTemplateId { get; set; }
+        public ShiftTemplate ShiftTemplate { get; set; }  // ShiftTemplate sınıfından bir ShiftTemplate nesnesi ile ilişkilendirilmiş vardiya atamasını temsil eder.
         public DateTime IsOffDay { get; set; }
         public DateTime IsOvertime { get; set; }
         public double OvertimeHours { get; set; }
+
     }
 
 }

@@ -17,5 +17,7 @@ namespace DataAccess.Entities.Concretes
         public DateTime ValidTo { get; set; }
         public decimal BasePricePerNight { get; set; }
         public string Currency { get; set; } = "TRY";
+
+        public BoardType BoardType { get; set; } // Navigation property for related board type
     }
 }

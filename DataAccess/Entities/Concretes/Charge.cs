@@ -16,6 +16,10 @@ namespace DataAccess.Entities.Concretes
         public string Description { get; set; } = default!;
         public decimal Amount { get; set; }
         public string Currency { get; set; } = "TRY";
+
+        public Reservation Reservation { get; set; } // Navigation property for related reservation
+
+
     }
 
 }

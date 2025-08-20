@@ -12,5 +12,6 @@ namespace DataAccess.Entities.Concretes
         
         public string Code { get; set; } = default!; // FullBoard, AllInclusive
         public string Description { get; set; } = default!;
+        public List<RatePlan> RatePlans { get; set; }  // Navigation property for related rate plans
     }
 }

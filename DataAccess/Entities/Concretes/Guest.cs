@@ -15,5 +15,6 @@ namespace DataAccess.Entities.Concretes
         public int? NationalId { get; set; }  // opsiyonel
         public string Email { get; set; } = default!;
         public int Phone { get; set; } = default!;
+        public List<Reservation> Reservations { get; set; }  // Navigation property for related reservations
     }
 }

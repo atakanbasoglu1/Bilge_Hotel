@@ -13,9 +13,11 @@ namespace DataAccess.Entities.Concretes
       
         public string FirstName { get; set; } = default!;
         public string LastName { get; set; } = default!;
-        public string Department { get; set; } = default!; // Reception, Housekeeping...
+        public int departmentId { get; set; } // Foreign key for Department
+        public Department Department { get; set; } = default!; // Reception, Housekeeping...//
         public string Role { get; set; } = default!;
         public decimal? HourlyWage { get; set; }     // saatlik ücretliler
         public decimal? MonthlySalary { get; set; }  // maaşlılar
+        public List<ShiftAssignment> ShiftAssignments { get; set; } // İlişkili vardiya atamaları
     }
 }

@@ -14,5 +14,7 @@ namespace DataAccess.Entities.Concretes
         public int Capacity { get; set; }
         public bool DefaultHasBalcony { get; set; }
         public bool DefaultHasMinibar { get; set; }
+
+        public List<Room> Rooms { get; set; }  // Navigation property for related rooms
     }
 }
