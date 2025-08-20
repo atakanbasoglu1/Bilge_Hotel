@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
-    // 8) Oda Blokajı (Bakım/Kapama)
-    public class RoomBlock
+    // Oda Blokajı (Bakım/Kapama)
+    public class RoomBlock:BaseEntity
     {
         
         public int RoomId { get; set; }

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
-    // 7) Ekstra Harcama (Mini bar vb.)
-    public class Charge
+    // Ekstra Harcama (Mini bar vb.)
+    public class Charge:BaseEntity
     {
        
         public int ReservationId { get; set; }

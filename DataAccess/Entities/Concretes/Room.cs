@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
-    public class Room
+    public class Room:BaseEntity
     {
         
         public string RoomNumber { get; set; } = default!;

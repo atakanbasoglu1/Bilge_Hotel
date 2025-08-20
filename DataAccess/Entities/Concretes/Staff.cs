@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
-    // 9) Personel
-    public class Staff
+    //  Personel
+    public class Staff:BaseEntity
     {
       
         public string FirstName { get; set; } = default!;

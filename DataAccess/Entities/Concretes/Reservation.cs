@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
     public enum ReservationSource { Web = 1, Reception = 2 }
     public enum ReservationStatus { Pending, Confirmed, CheckedIn, CheckedOut, Cancelled }
 
-    public class Reservation
+    public class Reservation:BaseEntity
     {
        
         public int GuestId { get; set; }

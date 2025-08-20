@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
-    public class BoardType
+    public class BoardType:BaseEntity
     {
         
         public string Code { get; set; } = default!; // FullBoard, AllInclusive

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{9144FD3C-2ED4-4EAE-9052-25A7E106B7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{B90956AE-7D5F-4CBC-9063-001C65912870}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{EE7F67C4-288D-4576-A0A1-9830212DC62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE7F67C4-288D-4576-A0A1-9830212DC62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE7F67C4-288D-4576-A0A1-9830212DC62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90956AE-7D5F-4CBC-9063-001C65912870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90956AE-7D5F-4CBC-9063-001C65912870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90956AE-7D5F-4CBC-9063-001C65912870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90956AE-7D5F-4CBC-9063-001C65912870}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EE7F67C4-288D-4576-A0A1-9830212DC62A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{B90956AE-7D5F-4CBC-9063-001C65912870} = {9144FD3C-2ED4-4EAE-9052-25A7E106B7C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7E82712F-793E-4388-9829-2099A58180A1}

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
 
-    // 11) Vardiya Ataması (Puantaj)
-    public class ShiftAssignment
+    //  Vardiya Ataması (Puantaj)
+    public class ShiftAssignment:BaseEntity
     {
         
         public int StaffId { get; set; }

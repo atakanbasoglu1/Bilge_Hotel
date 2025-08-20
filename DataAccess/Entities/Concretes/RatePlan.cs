@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
-    // 5) Fiyat Listesi (Sezonluk)
-    public class RatePlan
+    // Fiyat Listesi (Sezonluk)
+    public class RatePlan:BaseEntity
     {
        
         public int RoomTypeId { get; set; }

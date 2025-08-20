@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Abstract;
 
 namespace DataAccess.Entities.Concretes
 {
-    // 12) Erken Rezervasyon İndirimi
-    public class EarlyBookingRule
+    // Erken Rezervasyon İndirimi
+    public class EarlyBookingRule:BaseEntity
     {
        
         public int MinDaysBeforeCheckIn { get; set; } // 30, 90...
