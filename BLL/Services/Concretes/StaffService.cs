@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BLL.Enums;
+using BLL.Services.Abstract;
 using DataAccess.Entities.Concretes;
 using DataAccess.Repositories.Abstract;
 
 namespace BLL.Services.Concretes
 {
-    public class StaffService
+    public class StaffService : IStaffService
     {
         private readonly IBaseRepository<Staff> _baseRepository;
 

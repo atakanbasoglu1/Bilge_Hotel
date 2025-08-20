@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BLL.Enums;
+using BLL.Services.Abstract;
 using DataAccess.Entities.Concretes;
 using DataAccess.Repositories.Abstract;
 
 namespace BLL.Services.Concretes
 {
-    public class ShiftAssignmentService
+    public class ShiftAssignmentService : IShiftAssignmentService
     {
         private readonly IBaseRepository<ShiftAssignment> _baseRepository;
 
