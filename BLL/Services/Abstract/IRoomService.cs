@@ -15,6 +15,6 @@ namespace BLL.Services.Abstract
         Task<StatusMessage> CreateRoomAsync(Room room);
         Task<StatusMessage> DeleteRoomAsync(int id);
         Task<StatusMessage> UpdateRoomAsync(Room room);
-        Task<List<Room>> GetAvailableRoomsAsync(DateTime checkIn, DateTime checkOut);
+        Task<List<Room>> GetAvailableRoomsAsync(DateTime CheckIn, DateTime CheckOut);
     }
 }

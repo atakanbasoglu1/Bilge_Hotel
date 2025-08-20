@@ -9,12 +9,13 @@ namespace DataAccess.Entities.Concretes
 {
     public class Room:BaseEntity
     {
-        
+        public int RoomID { get; set; }
         public string RoomNumber { get; set; } = default!;
         public int Floor { get; set; }
         public int RoomTypeId { get; set; }
         public bool? HasBalcony { get; set; }   // null => RoomType default
         public bool? HasMinibar { get; set; }
-        public Reservation? Reservation { get; set; } // null => boş oda
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
     }
 }

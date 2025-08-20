@@ -13,10 +13,10 @@ namespace DataAccess.Entities.Concretes
     {
         
         public int StaffId { get; set; }
-        public DateTime Date { get; set; }
+        
         public int ShiftTemplateId { get; set; }
-        public bool IsOffDay { get; set; }
-        public bool IsOvertime { get; set; }
+        public DateTime IsOffDay { get; set; }
+        public DateTime IsOvertime { get; set; }
         public double OvertimeHours { get; set; }
     }
 
