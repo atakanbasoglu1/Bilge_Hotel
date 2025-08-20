@@ -15,5 +15,6 @@ namespace DataAccess.Entities.Concretes
         public int RoomTypeId { get; set; }
         public bool? HasBalcony { get; set; }   // null => RoomType default
         public bool? HasMinibar { get; set; }
+        public Reservation? Reservation { get; set; } // null => boş oda
     }
 }
