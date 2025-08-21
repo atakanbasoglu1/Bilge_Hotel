@@ -11,9 +11,9 @@ namespace DataAccess.Entities.Concretes
     public class ShiftTemplate:BaseEntity
     {
      
-        public string Name { get; set; } = default!; // 08-16 gibi
+        public string ShiftName { get; set; } = default!; //"Sabah", "Akşam", "Gece"
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
-        public List<ShiftAssignment> ShiftAssignments { get; set; }  // İlişkili vardiya atamaları
+        public List<ShiftAssignment> ShiftAssignments { get; set; } = new();  // İlişkili vardiya atamaları
     }
 }

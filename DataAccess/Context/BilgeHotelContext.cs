@@ -51,6 +51,7 @@ namespace DataAccess.Context
             modelBuilder.Entity<RatePlan>().ToTable("RatePlans");
             modelBuilder.Entity<ShiftAssignment>().ToTable("ShiftAssignments");
             modelBuilder.Entity<Department>().ToTable("Departments");
+            modelBuilder.Entity<SalaryCalculation>().ToTable("SalaryCalculations");
             base.OnModelCreating(modelBuilder); 
         }
 

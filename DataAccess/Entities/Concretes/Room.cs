@@ -15,9 +15,10 @@ namespace DataAccess.Entities.Concretes
         public int RoomTypeId { get; set; } //room typeta eklemek gerekir mi ekstra???
         public bool? HasBalcony { get; set; }   // null => RoomType default
         public bool? HasMinibar { get; set; }
-        public DateTime CheckIn { get; set; }
-        public DateTime CheckOut { get; set; }
-        public List<Reservation> Reservations { get; set; } // Navigation property for related reservations
+        // CheckIn ve CheckOut kaldırıldı - bunlar Reservation'da olmalı
+        //public DateTime CheckIn { get; set; }
+        //public DateTime CheckOut { get; set; }
+        public List<Reservation> Reservations { get; set; } = new();    // Navigation property for related reservations
 
         public RoomType RoomType { get; set; } = default!; // Navigation property for related room type
         

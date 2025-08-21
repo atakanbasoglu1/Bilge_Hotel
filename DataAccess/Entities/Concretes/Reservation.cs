@@ -22,9 +22,9 @@ namespace DataAccess.Entities.Concretes
         public ReservationStatus Status { get; set; }
         public int Adults { get; set; }
         public int Children { get; set; }
-        public Room Room { get; set; } // Navigation property for related room
-        public Guest Guest { get; set; } // Navigation property for related guest
-        public List<Charge> Charges { get; set; }  // Navigation property for related charges
+        public Room Room { get; set; } = default!; // Navigation property for related room
+        public Guest Guest { get; set; } = default!; // Navigation property for related guest
+        public List<Charge> Charges { get; set; } = new();  // Navigation property for related charges
         public BoardType BoardType { get; set; } = default!; // Navigation property for related board type
     }
 }
