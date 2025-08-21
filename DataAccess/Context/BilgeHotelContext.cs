@@ -37,7 +37,7 @@ namespace DataAccess.Context
         //modelbuilder ı yap 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            
             modelBuilder.Entity<Staff>().ToTable("Staffs");
             modelBuilder.Entity<Room>().ToTable("Rooms");
             modelBuilder.Entity<ShiftTemplate>().ToTable("ShiftTemplates");
@@ -50,17 +50,8 @@ namespace DataAccess.Context
             modelBuilder.Entity<EarlyBookingRule>().ToTable("EarlyBookingRules");
             modelBuilder.Entity<RatePlan>().ToTable("RatePlans");
             modelBuilder.Entity<ShiftAssignment>().ToTable("ShiftAssignments");
+            base.OnModelCreating(modelBuilder); 
         }
-
-
-
-
-
-
-
-
-
-
 
 
     }

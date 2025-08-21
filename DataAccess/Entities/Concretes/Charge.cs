@@ -20,6 +20,7 @@ namespace DataAccess.Entities.Concretes
         public Reservation Reservation { get; set; } // Navigation property for related reservation
 
 
+
     }
 
 }
