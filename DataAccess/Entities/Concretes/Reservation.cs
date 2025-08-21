@@ -25,5 +25,6 @@ namespace DataAccess.Entities.Concretes
         public Room Room { get; set; } // Navigation property for related room
         public Guest Guest { get; set; } // Navigation property for related guest
         public List<Charge> Charges { get; set; }  // Navigation property for related charges
+        public BoardType BoardType { get; set; } = default!; // Navigation property for related board type
     }
 }

@@ -19,7 +19,7 @@ namespace DataAccess.Entities.Concretes
         public DateTime CheckOut { get; set; }
         public List<Reservation> Reservations { get; set; } // Navigation property for related reservations
 
-        public RoomType RoomType { get; set; }  // Navigation property for related room type
+        public RoomType RoomType { get; set; } = default!; // Navigation property for related room type
         
     }
 }

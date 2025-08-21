@@ -13,7 +13,7 @@ namespace DataAccess.Entities.Concretes
       
         public string FirstName { get; set; } = default!;
         public string LastName { get; set; } = default!;
-        public int departmentId { get; set; } // Foreign key for Department
+        public int DepartmentId { get; set; }  // Foreign key for Department
         public Department Department { get; set; } = default!; // Reception, Housekeeping...//
         public string Role { get; set; } = default!;
         public decimal? HourlyWage { get; set; }     // saatlik ücretliler

@@ -50,6 +50,7 @@ namespace DataAccess.Context
             modelBuilder.Entity<EarlyBookingRule>().ToTable("EarlyBookingRules");
             modelBuilder.Entity<RatePlan>().ToTable("RatePlans");
             modelBuilder.Entity<ShiftAssignment>().ToTable("ShiftAssignments");
+            modelBuilder.Entity<Department>().ToTable("Departments");
             base.OnModelCreating(modelBuilder); 
         }
 
