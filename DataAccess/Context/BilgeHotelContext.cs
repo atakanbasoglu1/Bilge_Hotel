@@ -33,6 +33,9 @@ namespace DataAccess.Context
         public DbSet<EarlyBookingRule> EarlyBookingRules { get; set; }
         public DbSet<RatePlan> RatePlans { get; set; }
         public DbSet<ShiftAssignment> ShiftAssignments { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<SalaryCalculation> SalaryCalculations { get; set; }
+
 
         //modelbuilder ı yap 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -52,7 +55,50 @@ namespace DataAccess.Context
             modelBuilder.Entity<ShiftAssignment>().ToTable("ShiftAssignments");
             modelBuilder.Entity<Department>().ToTable("Departments");
             modelBuilder.Entity<SalaryCalculation>().ToTable("SalaryCalculations");
-            base.OnModelCreating(modelBuilder); 
+            base.OnModelCreating(modelBuilder);
+
+            //ilişkiler
+            modelBuilder.Entity<Room>()
+               .HasOne(r => r.RoomType)
+               .WithMany(rt => rt.Rooms)
+               .HasForeignKey(r => r.RoomTypeId)
+               .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Room)
+                .WithMany(room => room.Reservations)
+                .HasForeignKey(r => r.RoomId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Guest)
+                .WithMany()
+                .HasForeignKey(r => r.GuestId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.BoardType)
+                .WithMany()
+                .HasForeignKey(r => r.BoardTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Staff>()
+                .HasOne(s => s.Department)
+                .WithMany()
+                .HasForeignKey(s => s.DepartmentId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ShiftAssignment>()
+                .HasOne(sa => sa.Staff)
+                .WithMany(s => s.ShiftAssignments)
+                .HasForeignKey(sa => sa.StaffId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ShiftAssignment>()
+                .HasOne(sa => sa.ShiftTemplate)
+                .WithMany()
+                .HasForeignKey(sa => sa.ShiftTemplateId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
 

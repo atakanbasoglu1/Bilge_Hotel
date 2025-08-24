@@ -23,6 +23,7 @@ namespace DataAccess.Entities.Concretes
         public DateTime IsOvertime { get; set; }
         public double OvertimeHours { get; set; }
 
+
     }
 
 }

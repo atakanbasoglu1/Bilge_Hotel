@@ -18,6 +18,8 @@ namespace DataAccess.Entities.Concretes
         // CheckIn ve CheckOut kaldırıldı - bunlar Reservation'da olmalı
         //public DateTime CheckIn { get; set; }
         //public DateTime CheckOut { get; set; }
+        public bool IsAvailable { get; set; } = true; // Oda müsait mi? Varsayılan olarak true
+        public List<RoomBlock> RoomBlocks { get; set; } = new(); // Navigation property for related room blocks
         public List<Reservation> Reservations { get; set; } = new();    // Navigation property for related reservations
 
         public RoomType RoomType { get; set; } = default!; // Navigation property for related room type

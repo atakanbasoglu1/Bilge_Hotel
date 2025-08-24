@@ -22,9 +22,13 @@ namespace DataAccess.Entities.Concretes
         public ReservationStatus Status { get; set; }
         public int Adults { get; set; }
         public int Children { get; set; }
-        public Room Room { get; set; } = default!; // Navigation property for related room
+      
+        public Room? Room { get; set; }  //  Nullable çünkü RoomId nullable
         public Guest Guest { get; set; } = default!; // Navigation property for related guest
         public List<Charge> Charges { get; set; } = new();  // Navigation property for related charges
         public BoardType BoardType { get; set; } = default!; // Navigation property for related board type
+        public decimal TotalPrice { get; set; }  // Toplam fiyat (tutar) - opsiyonel
+        public decimal DiscountAmount { get; set; } // İndirim miktarı - opsiyonel
+        public string? SpecialRequests { get; set; } // Özel istekler - opsiyonel
     }
 }
